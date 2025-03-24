@@ -39,6 +39,7 @@ type CreateSpeechRequest struct {
 	Model          SpeechModel          `json:"model"`
 	Input          string               `json:"input"`
 	Voice          SpeechVoice          `json:"voice"`
+	Instructions   string               `json:"instructions,omitempty"`
 	ResponseFormat SpeechResponseFormat `json:"response_format,omitempty"` // Optional, default to mp3
 	Speed          float64              `json:"speed,omitempty"`           // Optional, default to 1.0
 }
