@@ -21,6 +21,14 @@ type Client struct {
 	createFormBuilder func(io.Writer) utils.FormBuilder
 }
 
+func (c *Client) GetAuthToken() string {
+	return c.config.authToken
+}
+
+func (c *Client) GetBaseUrl() string {
+	return c.config.BaseURL
+}
+
 type Response interface {
 	SetHeader(http.Header)
 }
